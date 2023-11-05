@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:waquar_portfolia/Model/colors.dart';
 
 import '../Widgets/navBar.dart';
 import 'landingPage.dart';
@@ -18,10 +17,11 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/mainBg.png',),
-              fit: BoxFit.cover,
-            )
-        ),
+          image: AssetImage(
+            'assets/images/mainBg.png',
+          ),
+          fit: BoxFit.cover,
+        )),
         child: Stack(
           children: [
             // Positioned(    // don't know why it is not working...
@@ -37,16 +37,15 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   children: [
                     Navbar(),
-
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 40),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 20, horizontal: 40),
                       child: LandingPage(),
                     ),
                   ],
                 ),
               ),
             ),
-
           ],
         ),
       ),
